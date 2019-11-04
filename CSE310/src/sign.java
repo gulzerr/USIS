@@ -4,11 +4,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Accumulators;
 import com.mongodb.client.model.Aggregates;
 import com.mongodb.client.model.Filters;
-import com.mongodb.util.JSON;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
-import com.mongodb.util.JSONParseException;
-
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import java.util.*;
@@ -18,7 +15,7 @@ public class sign {
 //	sign in
 
 
-	public String signin(String mail, String pass) {
+	public boolean signin(String mail, String pass) {
 		MongoClient mongoclient= new MongoClient("localhost", 27017);
 		MongoDatabase mongoDatabase= mongoclient.getDatabase("StudentInfo");
 		MongoCollection collection = mongoDatabase.getCollection("StudentDetails");
@@ -34,11 +31,11 @@ public class sign {
 		Document found=(Document) collection.find(new Document("email",mail)).first();
 		
 		if(found != null) {
-			return "Sign in successfull";
+			return true;
 		}
 		
 		else {
-			return "Email or password doesn't match with database";
+			return false;
 		}
 				
 	}
@@ -107,33 +104,34 @@ public class sign {
 		Document found=(Document) collection.find(new Document("email",mail)).first();
 		List<String> prev;
 		
-		boolean match=false;
+		updatePrevPass update=new updatePrevPass();
+		String match="";
 		
 		if(found != null) {
 			System.out.println("Found USer");
+						
+			prev=found.getList("prevpass", String.class);
+			for(int n=0; n<prev.size(); n++) {
+				match=prev.get(n);
+				if(match == pass) {
+					System.out.println("You cannot use your previous Password, Choose a different one");
+//					pass=sc.nextLine();
+//					n=0;
+				}
+			}
 			
 			Bson updatedvalue = new Document("password", pass);
 			Bson updateoperation = new Document("$set", updatedvalue);
-			Bson test= new Document("prevpass","riasatKhan");
-			Bson updateTest= new Document("$push",test);
-			System.out.println(found);
-			collection.updateOne(found,updateTest);
-			System.out.println(found);
 			collection.updateOne(found, updateoperation);
 			
-//			prev=found.getList("prevpass", String.class);
-			
-//			for(int n=0; n<prev.size(); n++) {
-//				if(prev.get(n) == pass) {
-//					System.out.println("You cannot use your previous Password, Choose a different one");
-//					pass=sc.nextLine();
-//					n=0;
-//				}
-//			}
-//			
-//			DBObject listItem = new BasicDBObject("scores", new BasicDBObject("type","quiz").append("score",99));
-//			DBObject updateQuery = new BasicDBObject("$push", listItem);
-//			StudentDetails.update(findQuery, updateQuery);
+			update.updatePreviousPassArray(mail,pass);	
 		}
+		
+	
+//		if(found != null) {
+//			Bson test= new Document("prevpass",pass);
+//			Bson updatePrevPass= new Document("$push",test);
+//			collection.updateOne(found,updatePrevPass);
+//		}
 	}
 }

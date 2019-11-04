@@ -14,7 +14,7 @@ public class Project extends Application {
 	}
 	
 	public void start (Stage primaryStage) throws Exception {
-		
+		try {
 		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		Scene scene = new Scene(root);
 //		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -23,6 +23,10 @@ public class Project extends Application {
 		primaryStage.setScene(scene);
 //		scene.setFill(Color.TRANSPARENT);
 		primaryStage.show();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
 
