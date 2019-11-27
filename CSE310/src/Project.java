@@ -15,20 +15,24 @@ public class Project extends Application {
 	
 	public void start (Stage primaryStage) throws Exception {
 		try {
-		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-		Scene scene = new Scene(root);
-//		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-//		primaryStage.initStyle(StageStyle.TRANSPARENT);
-		primaryStage.setTitle("My Title");  // Window Name
-		primaryStage.setScene(scene);
-//		scene.setFill(Color.TRANSPARENT);
-		primaryStage.show();
+			boolean close=false;
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Scene scene = new Scene(root);
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			primaryStage.initStyle(StageStyle.TRANSPARENT);
+			primaryStage.setTitle("BRACU USIS");  // Window Name
+			primaryStage.setScene(scene);
+//			scene.setFill(Color.TRANSPARENT);
+			primaryStage.show();
+			MainController closeWindow= new MainController();
+			close=closeWindow.toClose(close);
+			
+			if (close == true) {
+				primaryStage.close();
+			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 }
-
-
-

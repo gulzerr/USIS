@@ -17,9 +17,9 @@
          <children>
             <AnchorPane layoutX="322.0" layoutY="41.0" prefHeight="421.0" prefWidth="389.0" style="-fx-background-color: white; -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="41.0">
                <children>
-                  <Label layoutX="81.0" layoutY="41.0" prefHeight="17.0" prefWidth="95.0" text="Sign in">
+                  <Label layoutX="81.0" layoutY="41.0" prefHeight="17.0" prefWidth="95.0" text="Sign in" textFill="#0aa455">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Bell MT" size="30.0" />
                      </font>
                   </Label>
                   <TextField fx:id="emailtxt" layoutX="90.0" layoutY="110.0" prefHeight="42.0" prefWidth="255.0" promptText="email" style="-fx-background-color: transparent; -fx-border-color: grey; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="44.0">
@@ -43,6 +43,7 @@
                   <Label fx:id="label" layoutX="101.0" layoutY="258.0" prefHeight="17.0" prefWidth="255.0" />
                   <ButtonBar layoutX="176.0" layoutY="305.0" prefHeight="40.0" prefWidth="200.0" />
                   <Hyperlink fx:id="forgotpass" layoutX="185.0" layoutY="311.0" onAction="#forgot" prefHeight="23.0" prefWidth="170.0" text="Forgot password?" />
+                  <Button fx:id="adminLogin" layoutX="337.0" layoutY="-12.0" mnemonicParsing="false" onAction="#adminloginclick" style="-fx-background-color: linear-gradient(to right top, #08b5b5, #00c7a9, #00d78c, #64e360, #a8eb12);" text="Admin" textFill="#5b5959" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="31.0" layoutY="25.0" prefHeight="451.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right top, #d16ba5, #eb7684, #ec8f68, #dbac5e, #bdc86f, #a2d486, #85dea3, #67e6c5, #54e4d7, #4be1e6, #4fdef2, #5fd9fb); -fx-background-radius: 0.5cm;" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="25.0">

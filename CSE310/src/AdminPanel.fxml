@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right, #cfcfcf, #d1d3d6, #d1d7dc, #d0dce0, #cfe1e1);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminPanel">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #464e4e, #424848, #3d4242, #393d3d, #353737);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="25.0" layoutY="8.0" prefHeight="35.0" prefWidth="155.0" text="Admin Panel" textAlignment="CENTER" textFill="LIGHTGRAY">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="StudentCRUD" layoutY="110.0" onAction="#selectStudentCRUD" prefHeight="28.0" prefWidth="200.0" promptText="Students' CRUD" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
+            <ComboBox fx:id="StudentAdvising" layoutY="141.0" prefHeight="28.0" prefWidth="200.0" promptText="Students' Advising" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="244.0" layoutY="52.0" prefHeight="35.0" prefWidth="180.0" text="dsaf" textFill="#405d75">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="studentlist" layoutX="244.0" layoutY="100.0" prefHeight="449.0" prefWidth="444.0" style="-fx-background-color: linear-gradient(to right, #cfcfcf, #d1d3d6, #d1d7dc, #d0dce0, #cfe1e1);" />
+   </children>
+</AnchorPane>

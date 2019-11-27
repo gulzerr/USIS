@@ -30,8 +30,8 @@ public class MongoMain {
 //		sign signup= new sign();
 //		signup.signup();
 		
-		System.out.println("Forgot password?");
-		sign forgetpassword= new sign();
-		forgetpassword.resetpassword();
+//		System.out.println("Forgot password?");
+//		sign forgetpassword= new sign();
+//		forgetpassword.resetpassword();
 	}
 }
