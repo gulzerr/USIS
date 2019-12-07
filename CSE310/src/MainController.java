@@ -66,7 +66,6 @@ public class MainController {
 		primaryStage.setTitle("BRACU USIS");  // Window Name
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		this.close=true;
 //		primaryStage.close();
     }
     
@@ -76,12 +75,18 @@ public class MainController {
     }
 
     @FXML
-    void submit_click(ActionEvent event) {
+    void submit_click(ActionEvent event) throws Exception {
     	String email=emailtxt.getText();
     	String pass=passtxt.getText();
     	success=signin.signin(email, pass);
     	if (success == true) {
     		label.setText("Sign in successfull");
+    		Stage primaryStage=new Stage();
+    		Parent root = FXMLLoader.load(getClass().getResource("StudentPanel.fxml"));
+    		Scene scene = new Scene(root);
+    		primaryStage.setTitle("BRACU USIS");  // Window Name
+    		primaryStage.setScene(scene);
+    		primaryStage.show();
     	}
     	else label.setText("Invalid Login Data");
     }

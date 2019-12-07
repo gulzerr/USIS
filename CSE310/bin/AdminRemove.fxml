@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #cfcfcf, #d1d3d6, #d1d7dc, #d0dce0, #cfe1e1);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminRemove">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #464e4e, #424848, #3d4242, #393d3d, #353737);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="25.0" layoutY="8.0" prefHeight="35.0" prefWidth="155.0" text="Admin Panel" textAlignment="CENTER" textFill="LIGHTGRAY">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="StudentCRUD" layoutY="110.0" onAction="#selectStudentCRUD" prefHeight="28.0" prefWidth="200.0" promptText="Students' CRUD" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
+            <ComboBox fx:id="StudentAdvising" layoutY="141.0" prefHeight="28.0" prefWidth="200.0" promptText="Students' Advising" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="244.0" layoutY="52.0" prefHeight="35.0" prefWidth="187.0" style="-fx-background-radius: 1cm; -fx-background-color: CFE1E1;" text=" Remove a Student" textFill="#405d75">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchtxt" layoutX="616.0" layoutY="49.0" onAction="#searchclick" prefHeight="42.0" prefWidth="187.0" promptText="Search via ID" style="-fx-background-color: transparent; -fx-border-color: grey; -fx-border-width: 0px 0px 2px 0px;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="search" layoutX="802.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchclick" prefHeight="28.0" prefWidth="58.0" style="-fx-background-color: grey; -fx-background-radius: 1cm;" text="Search" textFill="ORANGE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="searchresult" layoutX="238.0" layoutY="120.0" prefHeight="295.0" prefWidth="619.0" style="-fx-background-color: #F8F2F3; -fx-background-radius: 1cm;">
+         <children>
+            <Text fx:id="namefield" fill="#ff9900" layoutX="20.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="surnamefield" fill="#ff9900" layoutX="21.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="idfield" fill="#ff9900" layoutX="22.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="mailfield" fill="#ff9900" layoutX="22.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="sexfield" fill="#ff9900" layoutX="22.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="agefield" fill="#ff9900" layoutX="22.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="addressfield" fill="#ff9900" layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="mobilefield" fill="#ff9900" layoutX="23.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact :" wrappingWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="nameresult" layoutX="112.0" layoutY="18.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="surnameresult" layoutX="112.0" layoutY="44.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="idresult" layoutX="112.0" layoutY="71.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mailresult" layoutX="112.0" layoutY="96.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="sexresult" layoutX="112.0" layoutY="119.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ageresult" layoutX="112.0" layoutY="144.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="addressresult" layoutX="112.0" layoutY="170.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mobileresult" layoutX="112.0" layoutY="194.0" prefHeight="17.0" prefWidth="155.0" textFill="#ff9900">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="remove" layoutX="773.0" layoutY="429.0" mnemonicParsing="false" onAction="#removeclick" prefHeight="28.0" prefWidth="77.0" style="-fx-background-color: #FB3C56; -fx-background-radius: 1cm;" text="Remove" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="removeStatus" layoutX="574.0" layoutY="435.0" prefHeight="17.0" prefWidth="175.0" textFill="RED" />
+   </children>
+</AnchorPane>

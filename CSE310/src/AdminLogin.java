@@ -41,7 +41,7 @@ public class AdminLogin {
     @FXML
     void Studentloginclick(ActionEvent event) throws Exception {
     	Stage primaryStage=new Stage();
-		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("BRACU USIS");  // Window Name
 		primaryStage.setScene(scene);
@@ -51,6 +51,7 @@ public class AdminLogin {
     @FXML
     void submit_click(ActionEvent event) throws Exception {
     	String email=emailtxt.getText();
+    	System.out.println(email);
     	String pass=passtxt.getText();
     	success=signin.signin(email, pass);
     	if (success == true) {
