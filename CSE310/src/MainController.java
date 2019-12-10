@@ -18,7 +18,8 @@ public class MainController {
 	
 	sign signin=new sign();
 	boolean success;  //for login success
-	boolean close;
+	public String sessionid="";
+	
     @FXML
     private ResourceBundle resources;
 
@@ -69,15 +70,14 @@ public class MainController {
 //		primaryStage.close();
     }
     
-    boolean toClose(boolean closeWindow) {
-    	closeWindow= this.close;
-    	return closeWindow;
-    }
 
     @FXML
     void submit_click(ActionEvent event) throws Exception {
     	String email=emailtxt.getText();
     	String pass=passtxt.getText();
+    	sessionid=emailtxt.getText();
+//    	StudentAdvising getsessionid = new StudentAdvising();
+//    	getsessionid.sessionid = sessionid;
     	success=signin.signin(email, pass);
     	if (success == true) {
     		label.setText("Sign in successfull");

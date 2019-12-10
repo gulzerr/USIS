@@ -127,7 +127,8 @@ public class AdminSignBackend {
 			document.append("address", studentInfo.get(7));
 			document.append("contact", studentInfo.get(8));
 			collection.insertOne(document);
-			
+			updatePrevPass prevpass = new updatePrevPass();
+			prevpass.updatePreviousPassArray(studentInfo.get(3), studentInfo.get(4));
 			System.out.println("Signed up successfully");
 		}
 		

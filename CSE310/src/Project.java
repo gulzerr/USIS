@@ -25,11 +25,6 @@ public class Project extends Application {
 //			scene.setFill(Color.TRANSPARENT);
 			primaryStage.show();
 			MainController closeWindow= new MainController();
-			close=closeWindow.toClose(close);
-			
-			if (close == true) {
-				primaryStage.close();
-			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();

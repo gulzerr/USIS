@@ -41,11 +41,12 @@ public class AdminLogin {
     @FXML
     void Studentloginclick(ActionEvent event) throws Exception {
     	Stage primaryStage=new Stage();
-		Parent root = FXMLLoader.load(getClass().getResource("AdminPanel.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("BRACU USIS");  // Window Name
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	
     }
 
     @FXML

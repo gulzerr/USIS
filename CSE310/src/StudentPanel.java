@@ -9,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class StudentPanel {
-
+	MainController getsessionid = new MainController();
+	String sessionid = getsessionid.sessionid;
+	
     @FXML
     private ResourceBundle resources;
 

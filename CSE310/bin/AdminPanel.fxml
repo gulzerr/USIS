@@ -14,7 +14,7 @@
                   <Font name="Consolas" size="24.0" />
                </font>
             </Label>
-            <ComboBox fx:id="StudentCRUD" layoutY="110.0" onAction="#selectStudentCRUD" prefHeight="28.0" prefWidth="200.0" promptText="Students' CRUD" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
+            <ComboBox fx:id="StudentCRUD" layoutY="174.0" onAction="#selectStudentCRUD" prefHeight="28.0" prefWidth="200.0" promptText="Students' CRUD" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
             <ComboBox fx:id="StudentAdvising" layoutY="141.0" prefHeight="28.0" prefWidth="200.0" promptText="Students' Advising" style="-fx-background-color: linear-gradient(to right, #cbcbcb, #a3a3a3, #7c7d7d, #575959, #353737);" />
          </children>
       </AnchorPane>
